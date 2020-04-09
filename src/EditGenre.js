@@ -33,7 +33,7 @@ useEffect(() => {
 
     return (
         <div className='container'>
-            <h1>Edit Genre</h1>
+            <h1 className='mt-3'>Edit Genre</h1>
             <form>
                 <div className='form-group'>
                     <label htmlFor='name'>Name</label>

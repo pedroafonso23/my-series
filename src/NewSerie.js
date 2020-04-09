@@ -24,7 +24,7 @@ const NewSerie = () => {
 
     return (
         <div className='container'>
-            <h1>New Serie</h1>
+            <h1 className='mt-3'>New Serie</h1>
             <form>
                 <div className='form-group'>
                     <label htmlFor='name'>Name</label>

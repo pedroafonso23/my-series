@@ -16,17 +16,17 @@ const Header = () => {
     setOpen(!open)
   }
   return (
-    <Navbar color='light' light expand='md'>
+    <Navbar color='dark' light expand='md'>
       <div className='container'>
-        <NavbarBrand tag={Link} to='/'>My Series</NavbarBrand>
+        <NavbarBrand className='text-white' tag={Link} to='/'>My Series</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={open} navbar>
           <Nav className='ml-auto' navbar>
             <NavItem>
-              <NavLink tag={Link} to='/series'>Series</NavLink>
+              <NavLink className='text-white' tag={Link} to='/series'>Series</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to='/genres'>Genre</NavLink>
+              <NavLink className='text-white ml-4 ' tag={Link} to='/genres'>Genre</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

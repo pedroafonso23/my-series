@@ -92,8 +92,10 @@ const InfoSerie = ({ match }) => {
                                 <h1 className='font-weight-light text-white'>{data.name}</h1>
                                 <div className='lead text-white'>
                                     { data.status === 'WATCHED' && <Badge color='success'>Watched</Badge> }
-                                    { data.status === 'TO_WATCH' && <Badge color='warning'>To Watch</Badge> }
-                                    Genre: {data.genre}
+                                    { data.status === 'TO_WATCH' && <Badge color='warning'>To Watch</Badge>}
+                                    <div>
+                                        Genre: {data.genre}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,13 +103,13 @@ const InfoSerie = ({ match }) => {
                 </div>
             </header>
             <div className='container'>
-                <button className='btn btn-primary' onClick={() => setMode('EDIT')}>Edit</button>
+                <button className='btn-lg btn-primary mt-3 mb-2' onClick={() => setMode('EDIT')}>Edit</button>
             </div>
             {
                 mode === 'EDIT' &&
                 <div className='container'>
                     <h1>Edit Serie</h1>
-                    <button className='btn btn-primary' onClick={() => setMode('INFO')}>Cancel Edit</button>
+                    <button className='btn btn-warning mt-3 mb-2' onClick={() => setMode('INFO')}>Cancel Edit</button>
                     <form>
                         <div className='form-group'>
                             <label htmlFor='name'>Name</label>
@@ -138,7 +140,7 @@ const InfoSerie = ({ match }) => {
                                     </label>
                             </div>
 
-                                <button type='button' onClick={save} className='btn btn-primary'>Submit</button>
+                                <button type='button' onClick={save} className='btn btn-success mt-3 mb-4'>Submit</button>
                     </form>
                 </div>
             }

@@ -27,7 +27,7 @@ const Series = () => {
       <th scope='row'>{record.id}</th>
       <td>{record.name}</td>
       <td>
-        <button className='btn btn-danger' onClick={() => deleteSerie(record.id)}>Remove</button>
+        <button className='btn btn-danger mr-4' onClick={() => deleteSerie(record.id)}>Remove</button>
         <Link to={'/series/' + record.id} className='btn btn-warning'>Info</Link>
       </td>
       </tr>
@@ -37,8 +37,10 @@ const Series = () => {
   if(data.length === 0) {
     return (
       <div className='container'>
-        <h1>Series</h1>
-        <div><Link to='/series/new' className='btn btn-primary' >New Serie</Link></div>
+        <div className='m-3 d-flex justify-content-between'>
+          <h1>Series</h1>
+          <Link to='/series/new' className='btn-lg btn-primary'>New Serie</Link>
+        </div>
         <div className='alert alert-warning' role='alert'>
           You do not have any series created.
         </div>
@@ -48,8 +50,10 @@ const Series = () => {
 
   return (
     <div className='container'>
-      <h1>Series</h1>
-      <div><Link to='/series/new' className='btn btn-primary'>New Serie</Link></div>
+      <div className='m-3 d-flex justify-content-between'>
+        <h1>Series</h1>
+        <Link to='/series/new' className='btn-lg btn-primary'>New Serie</Link>
+      </div>
       <table className='table table-dark'>
         <thead>
           <tr>

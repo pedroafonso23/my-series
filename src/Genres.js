@@ -27,7 +27,7 @@ const Genres = () => {
       <th scope='row'>{record.id}</th>
       <td>{record.name}</td>
       <td>
-        <button className='btn btn-danger' onClick={() => deleteGenre(record.id)}>Remove</button>
+        <button className='btn btn-danger mr-4' onClick={() => deleteGenre(record.id)}>Remove</button>
         <Link to={'/genres/' + record.id} className='btn btn-warning'>Edit</Link>
       </td>
       </tr>
@@ -37,8 +37,10 @@ const Genres = () => {
   if(data.length === 0) {
     return (
       <div className='container'>
-        <h1>Genres</h1>
-        <div><Link to='/genres/new' className='btn btn-primary'>New Genre</Link></div>
+        <div className='m-3 d-flex justify-content-between'>
+          <h1>Genres</h1>
+          <Link to='/series/new' className='btn-lg btn-primary'>New Genre</Link>
+        </div>
         <div className='alert alert-warning' role='alert'>
           You do not have any genres created.
         </div>
@@ -48,8 +50,10 @@ const Genres = () => {
 
   return (
     <div className='container'>
-      <h1>Genres</h1>
-      <div><Link to='/genres/new' className='btn btn-primary'>New Genre</Link></div>
+        <div className='m-3 d-flex justify-content-between'>
+          <h1>Genres</h1>
+          <Link to='/genres/new' className='btn-lg btn-primary'>New Genre</Link>
+        </div>
       <table className='table table-dark'>
         <thead>
           <tr>
